@@ -1,5 +1,6 @@
 return {
   { 'nvim-telescope/telescope.nvim' },
+  { 'neovim/nvim-lspconfig' },
   {
 	  "nvim-tree/nvim-tree.lua",
 	  version = "*",
