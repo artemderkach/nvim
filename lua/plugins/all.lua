@@ -1,4 +1,5 @@
 return {
+  { 'nvim-tree/nvim-web-devicons' },
   { 'nvim-telescope/telescope.nvim' },
   { 'neovim/nvim-lspconfig' },
   {
@@ -17,21 +18,6 @@ return {
 		  file = false,
 		  folder = false,
 		  folder_arrow = true,
-		},
-		glyphs = {
-		  folder = {
-		    arrow_closed = "▸",
-		    arrow_open = "▾",
-		  },
-		  git = {
-		    unstaged = "✗",
-		    staged = "✓",
-		    unmerged = "⌥",
-		    renamed = "➜",
-		    untracked = "★",
-		    deleted = "⊖",
-		    ignored = "◌",
-		  },
 		},
 	      },
 	    },
