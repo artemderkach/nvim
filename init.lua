@@ -1,8 +1,11 @@
 
 vim.o.number = true
 
+vim.opt.scl = "yes"
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
 
 require("config.lazy")
 
