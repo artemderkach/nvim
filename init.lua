@@ -1,17 +1,9 @@
 
-vim.o.number = true
-
-vim.opt.scl = "yes"
-
+vim.opt.number = true
+vim.opt.wrap = false
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
-
-require("config.lazy")
-
-require'lspconfig'.zls.setup{}
-
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle<CR>")
 
 -- movement between windows
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
@@ -25,8 +17,13 @@ vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('i', '<C-k>', '<Up>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', { noremap = true, silent = true })
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.pack.add({
+  "git@github.com:nvim-lua/plenary.nvim.git",
+  "git@github.com:MunifTanjim/nui.nvim.git",
+  "git@github.com:nvim-tree/nvim-web-devicons.git",
+  {
+    src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
+    version = vim.version.range('3')
+  },
+})
+
