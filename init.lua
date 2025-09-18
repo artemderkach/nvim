@@ -27,3 +27,27 @@ vim.pack.add({
   },
 })
 
+vim.lsp.config.zls = {
+  cmd = { 'zls' },
+  root_markers = { 'build.zig', '.git' },
+  filetypes = { 'zig' },
+}
+
+vim.lsp.enable({'zls'})
+
+vim.lsp.config["lua-language-server"] = {
+  cmd = { 'lua-language-server' },
+  root_markers = { '.luarc.json' },
+  filetypes = { 'lua' },
+}
+
+vim.lsp.enable({'lua-language-server'})
+
+vim.lsp.config["gopls"] = {
+  cmd = { 'gopls' },
+  root_markers = { 'go.mod' },
+  filetypes = { 'go' },
+}
+
+vim.lsp.enable({'gopls'})
+
